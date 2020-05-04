@@ -1,0 +1,300 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Легенды</title>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.bundle.js">
+ </head>
+ <body>
+     <style>
+.color-yellow{
+    font-size: 42px;
+}
+.item-content{
+    margin-top: 20px;
+             font-size: 17px;
+         }
+         span{
+             margin-bottom: 29px;
+         }
+         body{
+             
+            font-family: 'Roboto', sans-serif;
+
+            background-color: #d9d9d9;
+         }
+   .zoom-container{
+   transition: transform .2s; /* Animation */
+}
+.zoom-container:hover{
+  transform: scale(1.5);
+}
+     
+     .zerogrid{ width: 1200px; position: relative; margin: 0 auto; padding: 0px;}
+        .zerogrid:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+        
+        .zerogrid .f-right{float: right!important;}
+        .zerogrid .f-left{float: left!important;}
+        
+        .zerogrid .row:before,.row:after { content: '\0020'; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+        .zerogrid .row:after{clear: both; }
+        .zerogrid .row{zoom: 1;}
+        
+        .zerogrid .wrap-col{margin:10px;}
+        
+        .zerogrid .col-1-2, .zerogrid .col-1-3, .zerogrid .col-2-3, .zerogrid .col-1-4, .zerogrid .col-2-4, .zerogrid .col-3-4, .zerogrid .col-1-5, .zerogrid .col-2-5, .zerogrid .col-3-5, .zerogrid .col-4-5, .zerogrid .col-1-6, .zerogrid .col-2-6, .zerogrid .col-3-6, .zerogrid .col-4-6, .zerogrid .col-5-6{float:left; display: inline-block;}
+        
+        .zerogrid .col-full{width:100%;}
+        
+        .zerogrid .col-1-2,.zerogrid .col-1-2-fixed{width:50%;}
+        .zerogrid .offset-1-2{margin-left: 50%;}
+        
+        .zerogrid .col-1-3,.zerogrid .col-1-3-fixed{width:33.33%;}
+        .zerogrid .col-2-3,.zerogrid .col-2-3-fixed{width:66.66%;}
+        .zerogrid .offset-1-3{margin-left: 33.33%;}
+        .zerogrid .offset-2-3{margin-left: 66.66%;}
+        
+        .zerogrid .col-1-4,.zerogrid .col-1-4-fixed{width:25%;}
+        .zerogrid .col-2-4,.zerogrid .col-2-4-fixed{width:50%;}
+        .zerogrid .col-3-4,.zerogrid .col-3-4-fixed{width:75%;}
+        .zerogrid .offset-1-4{margin-left: 25%;}
+        .zerogrid .offset-2-4{margin-left: 50%;}
+        .zerogrid .offset-3-4{margin-left: 75%;}
+        
+        .zerogrid .col-1-5,.zerogrid .col-1-5-fixed{width:20%;}
+        .zerogrid .col-2-5,.zerogrid .col-2-5-fixed{width:40%;}
+        .zerogrid .col-3-5,.zerogrid .col-3-5-fixed{width:60%;}
+        .zerogrid .col-4-5,.zerogrid .col-4-5-fixed{width:80%;}
+        .zerogrid .offset-1-5{margin-left: 20%;}
+        .zerogrid .offset-2-5{margin-left: 40%;}
+        .zerogrid .offset-3-5{margin-left: 60%;}
+        .zerogrid .offset-4-5{margin-left: 80%;}
+        
+        .zerogrid .col-1-6,.zerogrid .col-1-6-fixed{width:16.66%;}
+        .zerogrid .col-2-6,.zerogrid .col-2-6-fixed{width:33.33%;}
+        .zerogrid .col-3-6,.zerogrid .col-3-6-fixed{width:50%;}
+        .zerogrid .col-4-6,.zerogrid .col-4-6-fixed{width:66.66%;}
+        .zerogrid .col-5-6,.zerogrid .col-5-6-fixed{width:83.33%;}
+        .zerogrid .offset-1-6{margin-left: 16.66%;}
+        .zerogrid .offset-2-6{margin-left: 33.33%;}
+        .zerogrid .offset-3-6{margin-left: 50%;}
+        .zerogrid .offset-4-6{margin-left: 66.66%;}
+        .zerogrid .offset-5-6{margin-left: 83.33%;}
+        
+        @media only screen and (min-width: 960px) and (max-width: 1199px) {
+            .zerogrid{width:960px;}
+        }
+        
+        @media only screen and (min-width: 768px) and (max-width: 959px) {
+            .zerogrid{width:768px;}
+        }
+        
+        @media only screen and (max-width: 767px) {
+            .zerogrid, .zerogrid .col-1-2, .zerogrid .col-1-3, .zerogrid .col-2-3, .zerogrid .col-1-4, .zerogrid .col-2-4, .zerogrid .col-3-4, .zerogrid .col-1-5, .zerogrid .col-2-5, .zerogrid .col-3-5, .zerogrid .col-4-5, .zerogrid .col-1-6, .zerogrid .col-2-6, .zerogrid .col-3-6, .zerogrid .col-4-6, .zerogrid .col-5-6{width:100%;}
+            
+            .zerogrid .offset-1-2, .zerogrid .offset-1-3, .zerogrid .offset-2-3, .zerogrid .offset-1-4, .zerogrid .offset-2-4, .zerogrid .offset-3-4, .zerogrid .offset-1-5, .zerogrid .offset-2-5, .zerogrid .offset-3-5, .zerogrid .offset-4-5, .zerogrid .offset-1-6, .zerogrid .offset-2-6, .zerogrid .offset-3-6, .zerogrid .offset-4-6, .zerogrid .offset-5-6{margin-left:0;}
+        }
+        img{
+         width: 200px;
+         height: 300px;
+     }
+     .zoom-container {
+    display: flex;
+    justify-content: center;
+}
+div{
+text-align:center;
+}
+.rounded {
+counter-reset: li; 
+list-style: none; 
+font: 14px "Trebuchet MS", "Lucida Sans";
+padding: 0;
+text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.rounded a {
+position: relative;
+display: block;
+padding: .4em .4em .4em 2em;
+margin: .5em 0;
+background: #fafafa;
+color: #444;
+text-decoration: none;
+border-radius: .3em;
+transition: .3s ease-out;
+}
+.rounded a:hover {background: #E9E4E0;}
+.rounded a:hover:before {transform: rotate(360deg);}
+.rounded a:before {
+content: counter(li);
+counter-increment: li;
+position: absolute;
+left: -1.3em;
+top: 50%;
+margin-top: -1.3em;
+background: #8FD4C1;
+height: 2em;
+width: 2em;
+line-height: 2em;
+border: .3em solid white;
+text-align: center;
+font-weight: bold;
+border-radius: 2em;
+transition: all .3s ease-out;
+}
+img{
+    border: 3px solid;
+}
+        </style>
+    <section class="content-box boxstyle-1 box-4  justify-content-center">
+        <div class="zerogrid">
+            <div class="row wrap-box"><!--Start Box-->
+                <div class="header">
+                    <div class="wrapper">
+                        <h2 class="color-yellow">Топ-10 фильмов-легенд</h2>
+                        <hr class="line">
+                        
+                    </div>
+                </div>
+                <div class="row"><!--Start Box-->
+                    <div class="col-1-3">
+                        <div class="wrap-col item">
+                            <div class="zoom-container">
+                                <img src="https://i.ibb.co/pdXwJqx/image.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <span> "Побег из Шоушенка" </span>
+                                <p>(1994, Роберт Земекис)</p>
+                                <a class="button" href="https://www.kinopoisk.ru/film/361/">Ещё</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-1-3">
+                        <div class="wrap-col item">
+                            <div class="zoom-container">
+                                <img src="https://lh3.googleusercontent.com/proxy/lBzZIzaBeUBOguGfpmqfhqv6oYORKGptDMEoEts2uHCPk14g6brDtGW9dN4i1Jrahvyy_5MONUITCwpOugTMUjyedMPoyv_vj4zahwG53ZXWtVKWwWkdOCU1pLi69wA--YxQimneFQBEsObYD_Q6vluybynWsrwT-GI" />
+                            </div>
+                            <div class="item-content">
+                                <span>"Леон" </span>
+                                <p>(1994, Люк Бессон)</p>
+                                <a class="button" href="https://www.kinopoisk.ru/film/389/">Ещё </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-3">
+                        <div class="wrap-col item">
+                            <div class="zoom-container">
+                                <img src="https://i.ibb.co/1qZfLYW/image.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <span>"Криминальное чтиво"</span>
+                                <p> (1994, Квентин Тарантино)</p>
+                                <a class="button" href="https://www.kinopoisk.ru/film/342/">Ещё</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"><!--Start Box-->
+                    <div class="col-1-3">
+                        <div class="wrap-col item">
+                            <div class="zoom-container">
+                                <img src="https://i.ibb.co/k1R6mdj/image.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <span>"Крестный отец" </span>
+                                <p>  (1972, Фрэнсис Форд Коппола)</p>
+                                <a class="button" href="https://www.kinopoisk.ru/film/325/">Ещё</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-3">
+                        <div class="wrap-col item">
+                            <div class="zoom-container">
+                                <img src="https://i.ibb.co/bJzdPK5/image.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <span>"Бойцовский клуб" </span>
+                                <p>  (1999, Дэвид Финчер) </p>
+                                <a class="button" href="single.html">Ещё</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-3">
+                        <div class="wrap-col item">
+                            <div class="zoom-container">
+                                <img src="https://i.ibb.co/37c13Qh/image.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <span>"Американская история Икс"</span>
+                                <p> (1998, Тони Кей) </p>
+                                <a class="button" href="https://i.ibb.co/k1R6mdj/image.jpg">Ещё</a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col-1-3">
+                        <div class="wrap-col item">
+                            <div class="zoom-container">
+                                <img src="https://i.ibb.co/G3MY7t5/image.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <span>"Форрест Гамп"</span>
+                                <p> (1994, Роберт Земекис)</p>
+                                <a class="button" href="https://www.kinopoisk.ru/film/448/">Ещё</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-3">
+                        <div class="wrap-col item">
+                            <div class="zoom-container">
+                                <img src="https://i.ibb.co/cTqMKZj/image.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <span>"Темный рыцарь"</span>
+                                <p> (2008, Кристофер Нолан) </p>
+                                <a class="button" href="https://www.kinopoisk.ru/film/111543/">Ещё</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-3">
+                        <div class="wrap-col item">
+                            <div class="zoom-container">
+                                <img src="https://i.ibb.co/KG7Zm24/image.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <span>"Список Шиндлера" </span>
+                                <p> (1993, Стивен Спилберг)</p>
+                                <a class="button" href="https://www.kinopoisk.ru/film/329/">Ещё</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-3">
+                        <div class="wrap-col item">
+                            <div class="zoom-container">
+                                <img src="https://i.ibb.co/F4HJZ0b/image.jpg" />
+                            </div>
+                            <div class="item-content">
+                                <span>"Пролетая над гнездом кукушки" </span>
+                                <p>(1975, Милош Форман)</p>
+                                <a class="button" href="https://www.kinopoisk.ru/film/329/">Ещё</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <ol class="rounded">
+        <li><a href="index.html">Меню</a></li>
+       
+        <li><a href="second.html">Кино во время пандемии </a></li>
+        <li><a href="third.html">Лучшие недооцененные кинокартины</a></li>
+      
+      </ol>
+ </body>
+ </html>
