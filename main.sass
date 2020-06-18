@@ -1,0 +1,62 @@
+*
+     box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+  font-family: 'Bad Script'
+  color: #fff
+  
+  
+.slider
+  display: flex
+    justify-content: center
+    align-items: center
+    padding: 0
+
+  .item
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid grey
+    flex-basis: 25%
+    transition: all 0.8s
+    background-color: #aeaeae
+    &:hover  
+      flex-basis: 60%
+    span 
+      font-size: 2rem
+      text-shadow: hoff voff blur #000
+
+
+
+
+
+
+
+  .item-1
+    background: url(head.img/5.jpg) no-repeat center center
+    background-size: cover
+  .item-2
+    background: url(head.img/6.jpg) no-repeat center center
+    background-size: cover
+  .item-3
+    background: url(head.img/7.jpg) no-repeat center center
+    background-size: cover
+  .item-4
+    background: url(head.img/8.jpg) no-repeat center center
+    background-size: cover
+
+    @media ( max-width:640px)
+      .slider
+        flex-flow: column
+        height: 100vh
+
+      
+      .item
+        width: 100%
+        
+        &:hover
+          flex-grow: 30%
+

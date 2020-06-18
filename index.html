@@ -1,74 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-</head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Hello, world!</title>
+  </head>
 <body>
-    <style>
-        body{
-            background-color: #d9d9d9;
-        }
-           .rounded {
-counter-reset: li; 
-list-style: none; 
-font: 14px "Trebuchet MS", "Lucida Sans";
-padding: 0;
-text-shadow: 0 1px 0 rgba(255,255,255,.5);
-}
-.rounded a {
-position: relative;
-display: block;
-padding: .4em .4em .4em 2em;
-margin: .5em 0;
-background: #fafafa;
-color: #444;
-text-decoration: none;
-border-radius: .3em;
-transition: .3s ease-out;
-}
-.rounded a:hover {background: #E9E4E0;}
-.rounded a:hover:before {transform: rotate(360deg);}
-.rounded a:before {
-content: counter(li);
-counter-increment: li;
-position: absolute;
-left: -1.3em;
-top: 50%;
-margin-top: -1.3em;
-background: #8FD4C1;
-height: 2em;
-width: 2em;
-line-height: 2em;
-border: .3em solid white;
-text-align: center;
-font-weight: bold;
-border-radius: 2em;
-transition: all .3s ease-out;
-}
-.title{
-    font-family: 'Roboto', sans-serif;      
-}
+<div class="slider">
+  <div class="item item-1"><span>Лето</span></div>
+  <div class="item item-2"><span>это</span></div>
+  <div class="item item-3"><span>очень</span></div>
+  <div class="item item-4"><span>Круто!</span></div>
+</div>
+ 
 
-.wrap{
-    margin-top: 150px;
-    display: flex;
-    flex-direction:column;
-    justify-content:center;
-align-items:center
-}
-    </style>
-    <div class="wrap">
-    <h1  align="center" class="title">Спасибо за посещение сайта <3</h1>
-    <ol align="center" class="rounded">
-        <li><a href="main.html">Топ-10 фильмов-легенд</a></li>
-        <li><a href="second.html">Кино во время пандемии </a></li>
-        <li><a href="third.html">Лучшие недооцененные кинокартины</a></li>
-      
-      </ol>
-    </div>
-</body>
+  </body>
 </html>
